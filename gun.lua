@@ -22,6 +22,7 @@
 ---@field mana number?
 ---@field sprite_unidentified string?
 ---@field deck_index integer
+---@field uses_remaining integer?
 
 ---@alias state table<string, any>
 
