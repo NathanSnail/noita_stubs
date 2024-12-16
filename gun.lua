@@ -24,6 +24,10 @@
 ---@field deck_index integer
 ---@field uses_remaining integer?
 
+---@class (exact) shot_ref
+---@field state state
+---@field num_of_cards_to_draw integer
+
 ---@alias state table<string, any>
 
 ACTION_TYPE_PROJECTILE = 0
