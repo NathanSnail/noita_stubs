@@ -2,16 +2,16 @@
 ---@meta
 
 ---@class action
----@field action fun(recursion: integer, iter: integer): integer
+---@field action fun(recursion: integer?, iter: integer?): iteration: integer?
 ---@field id string
 ---@field name string
 ---@field description string
 ---@field sprite string
 ---@field type integer
----@field recursive boolean
+---@field recursive boolean?
 ---@field spawn_level string
 ---@field spawn_probability string
----@field spawn_requires_flag string
+---@field spawn_requires_flag string?
 ---@field spawn_manual_unlock boolean?
 ---@field max_uses integer?
 ---@field custom_xml_file string?
@@ -21,7 +21,7 @@
 ---@field sound_loop_tag string?
 ---@field mana number?
 ---@field sprite_unidentified string?
----@field deck_index integer
+---@field deck_index integer?
 ---@field uses_remaining integer?
 
 ---@class (exact) shot_ref
@@ -311,4 +311,4 @@ function ConfigGunActionInfo_ReadToLua(
 )
 end
 
-function ConfigGun_ReadToLua(actions_per_round, shuffle_deck_when_empty, reload_time, deck_capacity) end
+function ConfigGun_ReadToLua( actions_per_round, shuffle_deck_when_empty, reload_time, deck_capacity) end
