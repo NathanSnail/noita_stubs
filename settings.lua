@@ -9,10 +9,10 @@ MOD_SETTING_SCOPE_ONLY_SET_DEFAULT = 3
 mod_setting_group_x_offset = 0 --increases automatically
 
 ---@alias mod_setting_scopes
----| `MOD_SETTING_SCOPE_NEW_GAME` # 0 - setting change (that is the value that's visible when calling ModSettingGet()) is applied after a new run is started
----| `MOD_SETTING_SCOPE_RUNTIME_RESTART` # 1 - setting change is applied on next game exe restart
----| `MOD_SETTING_SCOPE_RUNTIME` # 2 - setting change is applied immediately
----| `MOD_SETTING_SCOPE_ONLY_SET_DEFAULT` # 3 - this tells us that no changes should be applied. shouldn't be used in mod setting definition.
+---| 0 `MOD_SETTING_SCOPE_NEW_GAME` setting change (that is the value that's visible when calling ModSettingGet()) is applied after a new run is started
+---| 1 `MOD_SETTING_SCOPE_RUNTIME_RESTART` setting change is applied on next game exe restart
+---| 2 `MOD_SETTING_SCOPE_RUNTIME` setting change is applied immediately
+---| 3 `MOD_SETTING_SCOPE_ONLY_SET_DEFAULT` this tells us that no changes should be applied. shouldn't be used in mod setting definition.
 ---@alias mod_id string
 ---@alias mod_category_id string
 ---@alias setting_id string
