@@ -52,8 +52,8 @@ mod_setting_group_x_offset = 0 --increases automatically
 ---@field category_id mod_category_id
 ---@field ui_name string
 ---@field ui_description? string
----@field foldable boolean
----@field _folded boolean
+---@field foldable boolean?
+---@field _folded boolean?
 ---@field settings mod_settings[]
 
 ---@alias mod_settings_global mod_setting_category[]|mod_settings[]
