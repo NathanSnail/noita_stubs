@@ -41,7 +41,6 @@ mod_setting_group_x_offset = 0 --increases automatically
 ---@field value_display_multiplier? number
 ---@field value_default number
 ---@field format? string
----@field value_snap? number
 
 ---@class (exact) mod_setting_better_boolean:mod_setting
 ---@field value_default boolean
