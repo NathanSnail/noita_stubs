@@ -16,7 +16,7 @@ mod_setting_group_x_offset = 0 --increases automatically
 ---@alias mod_id string
 ---@alias mod_category_id string
 ---@alias setting_id string
----@alias setting_value string|number|boolean
+---@alias setting_value string | number | boolean
 
 ---@alias mod_setting_ui_fn fun(mod_id: mod_id, gui: gui, in_main_menu: boolean, im_id: number, setting: mod_setting)
 ---@alias mod_setting_change_fn fun(mod_id: mod_id, gui: gui, in_main_menu: boolean, setting: mod_setting, old_value: setting_value, new_value: setting_value)
@@ -45,7 +45,7 @@ mod_setting_group_x_offset = 0 --increases automatically
 ---@class (exact) mod_setting_better_boolean:mod_setting
 ---@field value_default boolean
 
----@alias mod_settings mod_setting_better_boolean|mod_setting_better_number|mod_setting_category|not_a_setting
+---@alias mod_settings mod_setting_better_boolean | mod_setting_better_number | mod_setting_category | not_a_setting
 
 ---@class mod_setting_category
 ---@field category_id mod_category_id
@@ -55,7 +55,7 @@ mod_setting_group_x_offset = 0 --increases automatically
 ---@field _folded boolean?
 ---@field settings mod_settings[]
 
----@alias mod_settings_global mod_setting_category[]|mod_settings[]
+---@alias mod_settings_global mod_setting_category[] | mod_settings[]
 
 ---@param mod_id mod_id
 ---@param setting mod_setting
