@@ -95,6 +95,9 @@
 ---@field sound_loop_tag string
 ---@field projectile_file string
 
+---@class (exact) shot_effects
+---@field recoil_knockback number
+
 ACTION_TYPE_PROJECTILE = 0
 ACTION_TYPE_STATIC_PROJECTILE = 1
 ACTION_TYPE_MODIFIER = 2
@@ -138,8 +141,7 @@ c = {}
 current_projectile = nil
 current_reload_time = 0
 
---technically fake idc
----@type state
+---@type shot_effects
 shot_effects = {}
 
 ---@type string[]
@@ -165,7 +167,8 @@ gun = {}
 ---@type integer
 current_reload_time = gun.reload_time
 
--- setup additional card-related variables
+-- Setup additional card-related variables
+
 dont_draw_actions = false
 force_stop_draws = false
 shot_structure = {}
@@ -182,8 +185,7 @@ function register_action(state) end
 ---@param effects state
 function register_gunshoteffects(effects) end
 
---- call this when current action changes
-
+---call this when current action changes
 ---@param action action
 function set_current_action(action) end
 
@@ -259,7 +261,6 @@ function check_recursion(data, rec_) end
 
 --- exported functions. called by the C++ code -------------------------------------
 
--- call this to do one shot (or round, or turn)
 ---@type shot_ref?
 root_shot = nil
 
@@ -276,11 +277,11 @@ function _set_gun() end
 
 function _set_gun2() end
 
--- this can be used to build a new deck
+---this can be used to build a new deck
 ---@param use_game_log_ boolean
 function _clear_deck(use_game_log_) end
 
--- this can be used to build a new deck
+---this can be used to build a new deck
 ---@param action_id string
 ---@param inventoryitem_id integer
 ---@param uses_remaining integer
