@@ -1,9 +1,13 @@
 ---@diagnostic disable: unused-local
 ---@meta
 
+---@type mod_setting_scopes
 MOD_SETTING_SCOPE_NEW_GAME = 0
+---@type mod_setting_scopes
 MOD_SETTING_SCOPE_RUNTIME_RESTART = 1
+---@type mod_setting_scopes
 MOD_SETTING_SCOPE_RUNTIME = 2
+---@type mod_setting_scopes
 MOD_SETTING_SCOPE_ONLY_SET_DEFAULT = 3
 
 mod_setting_group_x_offset = 0 --increases automatically
